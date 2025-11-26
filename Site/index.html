@@ -1,420 +1,747 @@
 <!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Read Only by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Header -->
-			<section id="header">
-<header>
-    <style>
-        #nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: block;
-        }
-        #nav ul li {
-            margin-bottom: 10px;
-        }
-        #nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: inline-block;
-        }
-        #nav ul li a:hover {
-            background-color: #4CAF50;
-            color: #fff;
-        }
-    </style>
-    <nav id="nav">
-        <ul>
-            <li><a href="#">Introdução</a></li>
-            <li><a href="#">Perigos</a></li>
-            <li><a href="#">Formulário</a></li>
-            <li><a href="#">Sobre</a></li>
-        </ul>
-    </nav>
-</header>
-				<footer>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
+<head>
+	<title>Dopamina e Dispositivos Eletrônicos</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<style>
+		.container {
+			max-width: 100%;
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+			hyphens: auto;
+		}
+
+		#nav ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			display: block;
+		}
+
+		#nav ul li {
+			margin-bottom: 10px;
+		}
+
+		#nav ul li a {
+			text-decoration: none;
+			color: #fff;
+			font-weight: bold;
+			padding: 10px 15px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			display: inline-block;
+		}
+
+		#nav ul li a:hover {
+			background-color: #4CAF50;
+			color: #fff;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		p,
+		li {
+			line-height: 1.6;
+			font-size: 1rem;
+		}
+
+		section {
+			padding: 2rem 0;
+		}
+
+		.resultado-box {
+			margin-top: 2rem;
+			padding: 1.5rem;
+			border-radius: 8px;
+			background-color: #f8f9fa;
+			border-left: 4px solid #007bff;
+		}
+
+		.card .form-check-input {
+			opacity: 1 !important;
+			position: relative !important;
+			margin-top: 0.3rem !important;
+			margin-right: 0.5rem !important;
+		}
+
+		.card .form-check-label {
+			cursor: pointer !important;
+		}
+
+		.form-check-input:checked {
+			background-color: #007bff;
+			border-color: #007bff;
+		}
+
+		.card {
+			transition: transform 0.2s ease;
+		}
+
+		.card:hover {
+			transform: translateY(-2px);
+		}
+
+		.form-check {
+			padding-left: 0;
+			margin-bottom: 0.5rem;
+		}
+
+		.form-check-input {
+			margin-right: 0.5rem;
+		}
+
+		#quiz-section .container {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.card-body {
+			padding: 1.5rem;
+		}
+
+		.card-title {
+			font-size: 1.1rem;
+			margin-bottom: 1rem;
+			font-weight: 600;
+		}
+
+		.form-check {
+			display: flex;
+			align-items: center;
+			padding: 0.5rem 0;
+			margin-bottom: 0;
+			border-radius: 5px;
+			transition: background-color 0.2s;
+		}
+
+		.form-check:hover {
+			background-color: rgba(0, 123, 255, 0.05);
+		}
+
+		.form-check-label {
+			padding: 0.5rem 0;
+			flex-grow: 1;
+			cursor: pointer;
+		}
+
+		.form-check-input {
+			width: 1.2em;
+			height: 1.2em;
+			margin-right: 0.75rem;
+		}
+
+		#one .container,
+		#two .container,
+		#three .container,
+		#four .container {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		#one p,
+		#two p,
+		#three p,
+		#four p {
+			text-align: justify;
+			margin-bottom: 1.5rem;
+		}
+
+		#one ul,
+		#two ul,
+		#three ul,
+		#four ul {
+			margin-bottom: 1.5rem;
+			padding-left: 1.5rem;
+		}
+
+		#one li,
+		#two li,
+		#three li,
+		#four li {
+			margin-bottom: 0.5rem;
+		}
+
+		#sobre {
+			background-color: #f8f9fa;
+			padding: 3rem 0;
+		}
+
+		#sobre .container {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.github-link {
+			display: inline-flex;
+			align-items: center;
+			text-decoration: none;
+			color: #333;
+			font-weight: 500;
+			transition: color 0.3s;
+		}
+
+		.github-link:hover {
+			color: #007bff;
+		}
+
+		.github-icon {
+			margin-right: 8px;
+			font-size: 1.2rem;
+		}
+
+		.header-logo {
+			text-align: center;
+			margin-bottom: 1.5rem;
+		}
+
+		.header-logo img {
+			max-height: 80px;
+			width: auto;
+		}
+
+		.major h2 {
+			margin-bottom: 0.5rem;
+		}
+
+		.major p {
+			margin-top: 1rem;
+			margin-bottom: 2rem;
+			font-size: 1.2rem;
+			color: #666;
+		}
+
+		@media (max-width: 768px) {
+			.container {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+
+			h2,
+			h3 {
+				font-size: 1.5rem;
+			}
+
+			.btn-lg {
+				font-size: 1rem;
+				padding: 0.75rem 1.5rem;
+			}
+
+			.card-body {
+				padding: 1rem;
+			}
+
+			.card-title {
+				font-size: 1rem;
+			}
+			
+			#one p,
+			#two p,
+			#three p,
+			#four p {
+				text-align: left;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.card-body {
+				padding: 0.75rem;
+			}
+
+			.form-check-label {
+				font-size: 0.9rem;
+			}
+			
+			#one ul,
+			#two ul,
+			#three ul,
+			#four ul {
+				padding-left: 1rem;
+			}
+		}
+	</style>
+</head>
+
+<body class="is-preload">
+
+	<section id="header">
+		<header>
+			<div class="header-logo">
+				<img src="images/Dopamina.png" alt="Logo Dopamina" />
+			</div>
+			<nav id="nav">
+				<ul>
+					<li><a href="#one">Introdução</a></li>
+					<li><a href="#two">Perigos</a></li>
+					<li><a href="#three">Relação</a></li>
+					<li><a href="#four">Conclusão</a></li>
+					<li><a href="#quiz-section">Quiz</a></li>
+					<li><a href="#sobre">Sobre</a></li>
+				</ul>
+			</nav>
+		</header>
+		<footer>
+		</footer>
+	</section>
+
+	<div id="wrapper">
+
+		<div id="main">
+
+			<section id="one">
+				<div class="image main" data-position="center">
+					<img src="images/banner.jpg" alt="" />
+				</div>
+				<div class="container">
+					<header class="major">
+						<h2>Os perigos da dopamina, e sua relação com dispositivos eletrônicos</h2>
+						<p>O que é dopamina</p>
+					</header>
+					<p>
+						A dopamina é um neurotransmissor muito importante para o funcionamento do cérebro. Ela é como um
+						"mensageiro químico" que ajuda várias áreas do sistema nervoso a se comunicarem. É graças à
+						dopamina que sentimos motivação, prazer e vontade de realizar certas atividades. Ela está
+						presente em momentos simples do dia a dia, como quando comemos algo gostoso, quando recebemos um
+						elogio, completamos uma tarefa ou até quando aprendemos algo novo.
+					</p>
+					<p>
+						O cérebro libera dopamina principalmente quando algo nos faz sentir bem ou quando esperamos
+						receber uma recompensa. Por isso, ela está diretamente ligada ao sistema de recompensa — um
+						conjunto de estruturas cerebrais que nos incentiva a repetir comportamentos que trazem algum
+						benefício, mesmo que esse benefício seja apenas uma sensação momentânea de prazer.
+					</p>
+					<p>
+						Durante milhares de anos, esse sistema funcionou de forma equilibrada, motivando comportamentos
+						essenciais à sobrevivência humana, como buscar alimento, criar laços sociais, explorar o
+						ambiente e aprender coisas novas. Porém, com o avanço da tecnologia e a chegada de estímulos
+						rápidos e intensos, esse equilíbrio natural passou a ser constantemente desafiado.
+					</p>
+					<p>
+						A dopamina não é apenas um "hormônio da felicidade", como muitas pessoas dizem. Ela é mais
+						complexa que isso. Ela também está relacionada com foco, aprendizado, memórias, tomada de
+						decisão e até com nossos hábitos — bons ou ruins.
+					</p>
+					<p>
+						Toda vez que algo nos gera prazer rápido, nosso cérebro registra que vale a pena repetir aquela
+						ação, criando um padrão de comportamento que pode se tornar automático.
+					</p>
+					<p>
+						E é justamente nesse ponto que começa a surgir um problema comum na vida moderna: a
+						hiperestimulação dopaminérgica, causada principalmente pelo uso excessivo de dispositivos
+						eletrônicos.
+					</p>
+				</div>
 			</section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+			<section id="two">
+				<div class="container">
+					<h3>Os perigos do desequilíbrio dopaminérgico</h3>
+					<p>
+						A dopamina, quando liberada de forma equilibrada, é extremamente benéfica. Ela nos ajuda a
+						aprender, a evoluir, a ter metas e a sentir satisfação ao conquistar algo. Porém, quando esse
+						equilíbrio é quebrado, começam a surgir consequências negativas que podem afetar tanto o cérebro
+						quanto o comportamento.
+					</p>
+					<p>
+						Um dos maiores perigos é o ciclo de recompensa acelerada. Quando recebemos estímulos rápidos
+						demais — como uma notificação, um like, um vídeo curto, um novo nível no jogo ou uma mensagem
+						chegando — o cérebro passa a liberar dopamina em pequenas explosões.
+					</p>
+					<p>
+						O problema é que essa liberação constante faz com que o cérebro se acostume. Ele começa a pedir
+						mais estímulo para sentir o mesmo nível de prazer. Esse processo é parecido com o que acontece em vícios comportamentais. A pessoa deixa de sentir
+						motivação por coisas simples, como estudar, ler, conversar, caminhar ou fazer atividades que
+						antes eram agradáveis, porque essas ações geram uma liberação de dopamina mais lenta e menos
+						intensa.
+					</p>
+					<p>
+						Aos poucos, o cérebro passa a buscar apenas aquilo que dá prazer rápido e imediato.
+					</p>
+					<p>
+						Quando esse desequilíbrio se instala, alguns sinais podem surgir, como:
+					</p>
+					<ul>
+						<li>dificuldade para se concentrar por longos períodos</li>
+						<li>necessidade constante de checar o smartphone</li>
+						<li>irritação quando não há acesso a estímulos digitais</li>
+						<li>sensação de tédio rápido</li>
+						<li>procrastinação frequente</li>
+						<li>perda de motivação por atividades importantes</li>
+						<li>ansiedade por novidades, mensagens e notificações</li>
+					</ul>
+					<p>
+						Outro perigo é que esse padrão pode alterar a forma como o cérebro reage à recompensa.
+						Atividades comuns passam a parecer "sem graça", enquanto aquilo que gera dopamina de forma
+						rápida se torna quase irresistível. E o ciclo se repete: quanto mais dopamina rápida o cérebro
+						recebe, mais ele quer.
+					</p>
+					<p>
+						Esse é um dos grandes desafios da geração atual: reaprender a lidar com o tempo, o tédio e a
+						concentração em um mundo onde cada segundo pode virar uma nova explosão de estímulos.
+					</p>
+				</div>
+			</section>
 
-				<!-- Main -->
-					<div id="main">
+			<section id="three">
+				<div class="container">
+					<h3>A relação entre a dopamina e o uso de dispositivos</h3>
+					<p>
+						Os smartphones, jogos digitais e redes sociais foram projetados exatamente para ativar o sistema
+						de recompensa do cérebro. Cada detalhe — desde as cores da interface até a frequência das
+						notificações — foi pensado para manter nossa atenção o maior tempo possível.
+					</p>
+					<p>
+						E isso acontece porque o modelo de felicidade rápida funciona: quanto mais engajados estamos,
+						mais dopamina o cérebro libera.
+					</p>
+					<p>
+						As redes sociais, por exemplo, usam reforços intermitentes. Isso significa que você nunca sabe
+						exatamente quando vai receber uma curtida, um comentário ou uma mensagem. Essa imprevisibilidade
+						ativa o mesmo mecanismo que encontramos em cassinos: a esperança de uma recompensa inesperada.
+					</p>
+					<p>
+						O cérebro libera dopamina não apenas quando recebemos algo, mas também quando estamos esperando
+						receber — e isso é extremamente poderoso.
+					</p>
+					<p>
+						Os jogos digitais seguem o mesmo padrão, oferecendo conquistas rápidas, metas pequenas,
+						recompensas constantes e o famoso "próximo nível". Isso mantém o cérebro preso ao ciclo de
+						prazer imediato.
+					</p>
+					<p>
+						Já o smartphone, como um todo, virou uma espécie de "máquina de dopamina portátil". Ele está
+						sempre por perto, sempre vibrando, iluminando, chamando, notificando e oferecendo algum tipo de
+						conteúdo que estimula o cérebro.
+					</p>
+					<p>
+						Sem perceber, muitas pessoas passam o dia inteiro passando de estímulo em estímulo: vídeos
+						curtos, feeds infinitos, mensagens, sons, imagens, cliques, jogos, notificações e novidades.
+					</p>
+					<p>
+						Esse comportamento constante de checar o aparelho ativa fenômenos modernos como:
+					</p>
+					<ul>
+						<li><b>FOMO (Fear of Missing Out)</b><br />O medo de estar perdendo algo importante. A sensação
+							de que, se a pessoa não olhar o smartphone, pode perder uma mensagem, um evento, uma
+							postagem ou alguma novidade "urgente". Esse sentimento é totalmente alimentado pelo sistema
+							dopaminérgico.</li>
+						<li><b>Síndrome do Ping</b><br />A ansiedade causada pela espera de notificações. Mesmo quando o
+							smartphone está silencioso, a pessoa pode sentir que ele vibrou, ouvir sons inexistentes ou
+							ficar presa na expectativa de que algo vai chegar a qualquer momento.</li>
+					</ul>
+					<p>
+						Esses fenômenos se apoiam diretamente na lógica da dopamina: a expectativa de receber algo pode
+						gerar quase tanto prazer quanto receber de fato.
+					</p>
+					<p>
+						Com o tempo, isso pode levar a:
+					</p>
+					<ul>
+						<li>queda de produtividade</li>
+						<li>irritação quando longe do aparelho</li>
+						<li>dificuldade de foco</li>
+						<li>perda de prazer em atividades "lentas"</li>
+						<li>dependência emocional do smartphone</li>
+						<li>baixa tolerância ao tédio</li>
+						<li>sensação de vazio quando não há estímulos</li>
+					</ul>
+					<p>
+						Hoje, muitos cientistas descrevem os dispositivos eletrônicos como os principais responsáveis
+						por essa nova crise da dopamina. Não porque eles sejam ruins por si só, mas porque foram criados
+						para capturar nossa atenção de forma muito intensa.
+					</p>
+					<p>
+						E o cérebro humano ainda não evoluiu para lidar tão bem com isso.
+					</p>
+				</div>
+			</section>
 
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="" />
+			<section id="four">
+				<div class="container">
+					<h3>Conclusão</h3>
+					<p>
+						Entender a dopamina é essencial para compreender como funcionam nossos hábitos, nossas vontades
+						e até nossos comportamentos automáticos. Em um mundo cheio de estímulos rápidos, é fácil cair no
+						ciclo da dopamina instantânea e perder o equilíbrio natural do cérebro. Os dispositivos
+						eletrônicos são ferramentas poderosas, mas também podem se tornar fontes de compulsão e
+						ansiedade quando usados de forma excessiva.
+					</p>
+					<p>
+						Ao reconhecer como a dopamina influencia nossas escolhas e emoções, podemos aprender a usar a
+						tecnologia de maneira mais saudável, consciente e equilibrada. O objetivo não é abandonar os
+						dispositivos, mas compreender como eles atuam sobre o cérebro — e, a partir disso, recuperar o
+						controle sobre nossos hábitos digitais.
+					</p>
+				</div>
+			</section>
+
+			<section id="quiz-section" class="bg-light py-5">
+				<div class="container my-5">
+					<h1 class="text-center mb-4">Quiz: Seu cérebro e a dopamina digital</h1>
+					<p class="text-center mb-5">
+						Responda às perguntas abaixo para descobrir <strong>como está o seu nível de exposição
+							dopaminérgica</strong> ao usar smartphones,
+						redes sociais e outros dispositivos. O resultado será calculado automaticamente.
+					</p>
+
+					<form id="quizForm" class="needs-validation" novalidate>
+						<div class="card mb-4 shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title">1. Com que frequência você pega o smartphone sem necessidade
+									real, apenas por impulso?</h5>
+								<div class="mt-3">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q1" value="0" required>
+										<label class="form-check-label">Raramente</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q1" value="1">
+										<label class="form-check-label">Às vezes</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q1" value="2">
+										<label class="form-check-label">Muitas vezes ao dia</label>
+									</div>
 								</div>
-								<div class="container">
-<header class="major">
-    <h2>Os perigos da dopamina, e sua relação com dispositivos eletrônicos</h2>
-    <p>O que é dopamina</p>
-</header>
-<p>
-A dopamina é um neurotransmissor muito importante para o funcionamento do cérebro. Ela é como um “mensageiro químico” que ajuda várias áreas do sistema nervoso a se comunicarem. É graças à dopamina que sentimos motivação, prazer e vontade de realizar certas atividades. Ela está presente em momentos simples do dia a dia, como quando comemos algo gostoso, quando recebemos um elogio, completamos uma tarefa ou até quando aprendemos algo novo.
-</p>
-<p>
-O cérebro libera dopamina principalmente quando algo nos faz sentir bem ou quando esperamos receber uma recompensa. Por isso, ela está diretamente ligada ao sistema de recompensa — um conjunto de estruturas cerebrais que nos incentiva a repetir comportamentos que trazem algum benefício, mesmo que esse benefício seja apenas uma sensação momentânea de prazer.
-</p>
-<p>
-Durante milhares de anos, esse sistema funcionou de forma equilibrada, motivando comportamentos essenciais à sobrevivência humana, como buscar alimento, criar laços sociais, explorar o ambiente e aprender coisas novas. Porém, com o avanço da tecnologia e a chegada de estímulos rápidos e intensos, esse equilíbrio natural passou a ser constantemente desafiado.
-</p>
-<p>
-A dopamina não é apenas um “hormônio da felicidade”, como muitas pessoas dizem. Ela é mais complexa que isso. Ela também está relacionada com foco, aprendizado, memórias, tomada de decisão e até com nossos hábitos — bons ou ruins. Toda vez que algo nos gera prazer rápido, nosso cérebro registra que vale a pena repetir aquela ação, criando um padrão de comportamento que pode se tornar automático.
-</p>
-<p>
-E é justamente nesse ponto que começa a surgir um problema comum na vida moderna: a hiperestimulação dopaminérgica, causada principalmente pelo uso excessivo de dispositivos eletrônicos.
-								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>Os perigos do desequilíbrio dopaminérgico</h3>
-									<p>
-									A dopamina, quando liberada de forma equilibrada, é extremamente benéfica. Ela nos ajuda a aprender, a evoluir, a ter metas e a sentir satisfação ao conquistar algo. Porém, quando esse equilíbrio é quebrado, começam a surgir consequências negativas que podem afetar tanto o cérebro quanto o comportamento.
-									</p>
-									<p>
-									Um dos maiores perigos é o ciclo de recompensa acelerada. Quando recebemos estímulos rápidos demais — como uma notificação, um like, um vídeo curto, um novo nível no jogo ou uma mensagem chegando — o cérebro passa a liberar dopamina em pequenas explosões. O problema é que essa liberação constante faz com que o cérebro se acostume. Ele começa a pedir mais estímulo para sentir o mesmo nível de prazer.
-									</p>
-									<p>
-									Esse processo é parecido com o que acontece em vícios comportamentais. A pessoa deixa de sentir motivação por coisas simples, como estudar, ler, conversar, caminhar ou fazer atividades que antes eram agradáveis, porque essas ações geram uma liberação de dopamina mais lenta e menos intensa. Aos poucos, o cérebro passa a buscar apenas aquilo que dá prazer rápido e imediato.
-									</p>
-									<p>
-									Quando esse desequilíbrio se instala, alguns sinais podem surgir, como:
-									</p>
-									<ul>
-										<li>dificuldade para se concentrar por longos períodos</li>
-										<li>necessidade constante de checar o smartphone</li>
-										<li>irritação quando não há acesso a estímulos digitais</li>
-										<li>sensação de tédio rápido</li>
-										<li>procrastinação frequente</li>
-										<li>perda de motivação por atividades importantes</li>
-										<li>ansiedade por novidades, mensagens e notificações</li>
-									</ul>
-									<p>
-									Outro perigo é que esse padrão pode alterar a forma como o cérebro reage à recompensa. Atividades comuns passam a parecer “sem graça”, enquanto aquilo que gera dopamina de forma rápida se torna quase irresistível. E o ciclo se repete: quanto mais dopamina rápida o cérebro recebe, mais ele quer.
-									</p>
-									<p>
-									Esse é um dos grandes desafios da geração atual: reaprender a lidar com o tempo, o tédio e a concentração em um mundo onde cada segundo pode virar uma nova explosão de estímulos.
-									</p>
-								</div>
-							</section>
-
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>A relação entre a dopamina e o uso de dispositivos</h3>
-									<p>
-									Os smartphones, jogos digitais e redes sociais foram projetados exatamente para ativar o sistema de recompensa do cérebro. Cada detalhe — desde as cores da interface até a frequência das notificações — foi pensado para manter nossa atenção o maior tempo possível. E isso acontece porque o modelo de felicidade rápida funciona: quanto mais engajados estamos, mais dopamina o cérebro libera.
-									</p>
-									<p>
-									As redes sociais, por exemplo, usam reforços intermitentes. Isso significa que você nunca sabe exatamente quando vai receber uma curtida, um comentário ou uma mensagem. Essa imprevisibilidade ativa o mesmo mecanismo que encontramos em cassinos: a esperança de uma recompensa inesperada. O cérebro libera dopamina não apenas quando recebemos algo, mas também quando estamos esperando receber — e isso é extremamente poderoso.
-									</p>
-									<p>
-									Os jogos digitais seguem o mesmo padrão, oferecendo conquistas rápidas, metas pequenas, recompensas constantes e o famoso “próximo nível”. Isso mantém o cérebro preso ao ciclo de prazer imediato.
-									</p>
-									<p>
-									Já o smartphone, como um todo, virou uma espécie de “máquina de dopamina portátil”. Ele está sempre por perto, sempre vibrando, iluminando, chamando, notificando e oferecendo algum tipo de conteúdo que estimula o cérebro. Sem perceber, muitas pessoas passam o dia inteiro passando de estímulo em estímulo: vídeos curtos, feeds infinitos, mensagens, sons, imagens, cliques, jogos, notificações e novidades.
-									</p>
-									<p>
-									Esse comportamento constante de checar o aparelho ativa fenômenos modernos como:
-									</p>
-									<ul>
-										<li><b>FOMO (Fear of Missing Out)</b><br/>O medo de estar perdendo algo importante. A sensação de que, se a pessoa não olhar o smartphone, pode perder uma mensagem, um evento, uma postagem ou alguma novidade “urgente”. Esse sentimento é totalmente alimentado pelo sistema dopaminérgico.</li>
-										<li><b>Síndrome do Ping</b><br/>A ansiedade causada pela espera de notificações. Mesmo quando o smartphone está silencioso, a pessoa pode sentir que ele vibrou, ouvir sons inexistentes ou ficar presa na expectativa de que algo vai chegar a qualquer momento.</li>
-									</ul>
-									<p>
-									Esses fenômenos se apoiam diretamente na lógica da dopamina: a expectativa de receber algo pode gerar quase tanto prazer quanto receber de fato.
-									</p>
-									<p>
-									Com o tempo, isso pode levar a:
-									</p>
-									<ul>
-										<li>queda de produtividade</li>
-										<li>irritação quando longe do aparelho</li>
-										<li>dificuldade de foco</li>
-										<li>perda de prazer em atividades “lentas”</li>
-										<li>dependência emocional do smartphone</li>
-										<li>baixa tolerância ao tédio</li>
-										<li>sensação de vazio quando não há estímulos</li>
-									</ul>
-									<p>
-									Hoje, muitos cientistas descrevem os dispositivos eletrônicos como os principais responsáveis por essa nova crise da dopamina. Não porque eles sejam ruins por si só, mas porque foram criados para capturar nossa atenção de forma muito intensa, e o cérebro humano ainda não evoluiu para lidar tão bem com isso.
-									</p>
-								</div>
-							</section>
-
-						<!-- Four -->
-							<section id="four">
-								<div class="container">
-									<h3>Conclusão</h3>
-									<p>
-									Entender a dopamina é essencial para compreender como funcionam nossos hábitos, nossas vontades e até nossos comportamentos automáticos. Em um mundo cheio de estímulos rápidos, é fácil cair no ciclo da dopamina instantânea e perder o equilíbrio natural do cérebro. Os dispositivos eletrônicos são ferramentas poderosas, mas também podem se tornar fontes de compulsão e ansiedade quando usados de forma excessiva.
-									</p>
-									<p>
-									Ao reconhecer como a dopamina influencia nossas escolhas e emoções, podemos aprender a usar a tecnologia de maneira mais saudável, consciente e equilibrada. O objetivo não é abandonar os dispositivos, mas compreender como eles atuam sobre o cérebro — e, a partir disso, recuperar o controle sobre nossos hábitos digitais.
-									</p>
-								</div>
-							</section>
-
-							<section id="quiz-section" class="bg-light py-5" style="padding-top: 80px;">
-								<div class="container my-5">
-
-									<h1 class="text-center mb-4">Quiz: Seu cérebro e a dopamina digital</h1>
-									<p class="text-center mb-5">
-										Responda às perguntas abaixo para descobrir <strong>como está o seu nível de exposição dopaminérgica</strong> ao usar smartphones,
-										redes sociais e outros dispositivos. O resultado será calculado automaticamente.
-									</p>
-
-									<form id="quizForm" class="needs-validation" novalidate>
-
-										<!-- PERGUNTA 1 -->
-										<div class="card mb-4 shadow-sm">
-											<div class="card-body">
-												<h5 class="card-title">1. Com que frequência você pega o smartphone sem necessidade real, apenas por impulso?</h5>
-												<div class="mt-3">
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q1" value="0" required>
-														<label class="form-check-label">Raramente</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q1" value="1">
-														<label class="form-check-label">Às vezes</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q1" value="2">
-														<label class="form-check-label">Muitas vezes ao dia</label>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!-- PERGUNTA 2 -->
-										<div class="card mb-4 shadow-sm">
-											<div class="card-body">
-												<h5 class="card-title">2. Você sente ansiedade quando fica um tempo sem olhar mensagens, redes sociais ou notificações?</h5>
-												<div class="mt-3">
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q2" value="0" required>
-														<label class="form-check-label">Não sinto</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q2" value="1">
-														<label class="form-check-label">Sinto um pouco</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q2" value="2">
-														<label class="form-check-label">Sinto bastante ansiedade</label>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!-- PERGUNTA 3 -->
-										<div class="card mb-4 shadow-sm">
-											<div class="card-body">
-												<h5 class="card-title">3. Você costuma desbloquear o smartphone mesmo sem ter uma notificação?</h5>
-												<div class="mt-3">
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q3" value="0" required>
-														<label class="form-check-label">Quase nunca</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q3" value="1">
-														<label class="form-check-label">Às vezes</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q3" value="2">
-														<label class="form-check-label">Com frequência</label>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!-- PERGUNTA 4 -->
-										<div class="card mb-4 shadow-sm">
-											<div class="card-body">
-												<h5 class="card-title">4. Quanto tempo você passa por dia em redes sociais ou apps de entretenimento?</h5>
-												<div class="mt-3">
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q4" value="0" required>
-														<label class="form-check-label">Menos de 1 hora</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q4" value="1">
-														<label class="form-check-label">Entre 1 e 3 horas</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q4" value="2">
-														<label class="form-check-label">Mais de 3 horas por dia</label>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!-- PERGUNTA 5 -->
-										<div class="card mb-4 shadow-sm">
-											<div class="card-body">
-												<h5 class="card-title">5. Quando está estudando ou trabalhando, você se distrai facilmente com o smartphone?</h5>
-												<div class="mt-3">
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q5" value="0" required>
-														<label class="form-check-label">Não me atrapalha</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q5" value="1">
-														<label class="form-check-label">Às vezes me desconcentra</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q5" value="2">
-														<label class="form-check-label">Me atrapalha bastante</label>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!-- PERGUNTA 6 -->
-										<div class="card mb-4 shadow-sm">
-											<div class="card-body">
-												<h5 class="card-title">6. Você já sentiu “vibração fantasma”, achando que recebeu uma notificação quando não recebeu?</h5>
-												<div class="mt-3">
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q6" value="0" required>
-														<label class="form-check-label">Nunca</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q6" value="1">
-														<label class="form-check-label">Algumas vezes</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q6" value="2">
-														<label class="form-check-label">Frequentemente</label>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!-- PERGUNTA 7 -->
-										<div class="card mb-4 shadow-sm">
-											<div class="card-body">
-												<h5 class="card-title">7. Você sente necessidade de checar redes sociais logo ao acordar ou antes de dormir?</h5>
-												<div class="mt-3">
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q7" value="0" required>
-														<label class="form-check-label">Não</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q7" value="1">
-														<label class="form-check-label">Às vezes</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q7" value="2">
-														<label class="form-check-label">Sempre</label>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!-- PERGUNTA 8 -->
-										<div class="card mb-4 shadow-sm">
-											<div class="card-body">
-												<h5 class="card-title">8. Já tentou reduzir o uso do smartphone e teve dificuldade?</h5>
-												<div class="mt-3">
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q8" value="0" required>
-														<label class="form-check-label">Não</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q8" value="1">
-														<label class="form-check-label">Um pouco</label>
-													</div>
-
-													<div class="form-check">
-														<input class="form-check-input" type="radio" name="q8" value="2">
-														<label class="form-check-label">Sim, bastante</label>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!-- BOTÃO FINAL -->
-										<div class="text-center">
-											<button type="submit" class="btn btn-primary btn-lg px-5">Ver Resultado</button>
-										</div>
-
-									</form>
-
-									<!-- RESULTADO -->
-									<div id="resultado" class="resultado-box"></div>
-								</div>
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
+							</div>
 						</div>
-					</section>
 
-			</div>
+						<div class="card mb-4 shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title">2. Você sente ansiedade quando fica um tempo sem olhar mensagens,
+									redes sociais ou notificações?</h5>
+								<div class="mt-3">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q2" value="0" required>
+										<label class="form-check-label">Não sinto</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q2" value="1">
+										<label class="form-check-label">Sinto um pouco</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q2" value="2">
+										<label class="form-check-label">Sinto bastante ansiedade</label>
+									</div>
+								</div>
+							</div>
+						</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+						<div class="card mb-4 shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title">3. Você costuma desbloquear o smartphone mesmo sem ter uma
+									notificação?</h5>
+								<div class="mt-3">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q3" value="0" required>
+										<label class="form-check-label">Quase nunca</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q3" value="1">
+										<label class="form-check-label">Às vezes</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q3" value="2">
+										<label class="form-check-label">Com frequência</label>
+									</div>
+								</div>
+							</div>
+						</div>
 
-	</body>
+						<div class="card mb-4 shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title">4. Quanto tempo você passa por dia em redes sociais ou apps de
+									entretenimento?</h5>
+								<div class="mt-3">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q4" value="0" required>
+										<label class="form-check-label">Menos de 1 hora</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q4" value="1">
+										<label class="form-check-label">Entre 1 e 3 horas</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q4" value="2">
+										<label class="form-check-label">Mais de 3 horas por dia</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-4 shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title">5. Quando está estudando ou trabalhando, você se distrai
+									facilmente com o smartphone?</h5>
+								<div class="mt-3">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q5" value="0" required>
+										<label class="form-check-label">Não me atrapalha</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q5" value="1">
+										<label class="form-check-label">Às vezes me desconcentra</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q5" value="2">
+										<label class="form-check-label">Me atrapalha bastante</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-4 shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title">6. Você já sentiu "vibração fantasma", achando que recebeu uma
+									notificação quando não recebeu?</h5>
+								<div class="mt-3">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q6" value="0" required>
+										<label class="form-check-label">Nunca</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q6" value="1">
+										<label class="form-check-label">Algumas vezes</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q6" value="2">
+										<label class="form-check-label">Frequentemente</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-4 shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title">7. Você sente necessidade de checar redes sociais logo ao acordar
+									ou antes de dormir?</h5>
+								<div class="mt-3">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q7" value="0" required>
+										<label class="form-check-label">Não</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q7" value="1">
+										<label class="form-check-label">Às vezes</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q7" value="2">
+										<label class="form-check-label">Sempre</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-4 shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title">8. Já tentou reduzir o uso do smartphone e teve dificuldade?</h5>
+								<div class="mt-3">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q8" value="0" required>
+										<label class="form-check-label">Não</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q8" value="1">
+										<label class="form-check-label">Um pouco</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="q8" value="2">
+										<label class="form-check-label">Sim, bastante</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="text-center">
+							<button type="submit" class="btn btn-primary btn-lg px-5">Ver Resultado</button>
+						</div>
+					</form>
+
+					<div id="resultado" class="resultado-box"></div>
+				</div>
+			</section>
+
+			<section id="sobre">
+				<div class="container">
+					<h3 class="text-center mb-4">Sobre</h3>
+					<div class="row justify-content-center">
+						<div class="col-md-8 text-center">
+							<p class="mb-3"><strong>Feito por: Lucas Tedesco Santos</strong></p>
+							<a href="https://github.com/LucasTS-42034" class="github-link" target="_blank">
+								<span class="github-icon">📂</span>
+								GitHub
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script>
+		document.getElementById('quizForm').addEventListener('submit', function (e) {
+			e.preventDefault();
+
+			let total = 0;
+			const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8'];
+			let todasRespondidas = true;
+
+			questions.forEach(q => {
+				const selected = document.querySelector(`input[name="${q}"]:checked`);
+				if (selected) {
+					total += parseInt(selected.value);
+				} else {
+					todasRespondidas = false;
+					const card = document.querySelector(`input[name="${q}"]`).closest('.card');
+					card.style.border = '2px solid #dc3545';
+				}
+			});
+
+			if (!todasRespondidas) {
+				document.getElementById('resultado').innerHTML = 
+					'<div class="alert alert-warning">Por favor, responda todas as perguntas antes de ver o resultado.</div>';
+				return;
+			}
+
+			let message = '';
+			if (total <= 5) {
+				message = '<h4>✅ Baixo risco</h4><p>Você tem um bom controle sobre o uso de dispositivos eletrônicos e parece não sofrer com os efeitos da superestimulação dopaminérgica. Continue mantendo esse equilíbrio!</p>';
+			} else if (total <= 10) {
+				message = '<h4>⚠️ Risco moderado</h4><p>Você já apresenta alguns sinais de dependência digital. Tente estabelecer limites no uso do smartphone e pratique atividades offline para equilibrar sua rotina.</p>';
+			} else {
+				message = '<h4>🔴 Alto risco</h4><p>Seu uso de dispositivos eletrônicos pode estar afetando sua qualidade de vida. Considere reduzir drasticamente o tempo de tela e buscar ajuda se necessário.</p>';
+			}
+
+			document.getElementById('resultado').innerHTML = message;
+			
+			document.getElementById('resultado').scrollIntoView({ 
+				behavior: 'smooth' 
+			});
+		});
+
+		document.querySelectorAll('.form-check-input').forEach(input => {
+			input.addEventListener('change', function() {
+				const card = this.closest('.card');
+				card.style.border = '';
+			});
+		});
+	</script>
+</body>
+
 </html>
