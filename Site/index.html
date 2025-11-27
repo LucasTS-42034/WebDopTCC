@@ -2,12 +2,21 @@
 <html>
 
 <head>
-	<title>Dopamina e Dispositivos Eletrônicos</title>
+	<title>Web-Dop - Dopamina e Dispositivos Eletrônicos</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 	<style>
+		:root {
+			--primary-color: #4361ee;
+			--secondary-color: #3a0ca3;
+			--accent-color: #4cc9f0;
+			--text-color: #2b2d42;
+			--light-bg: #f8f9fa;
+			--dark-bg: #1a1a2e;
+		}
+
 		.container {
 			max-width: 100%;
 			overflow-wrap: break-word;
@@ -32,14 +41,16 @@
 			font-weight: bold;
 			padding: 10px 15px;
 			border-radius: 5px;
-			transition: background-color 0.3s ease;
+			transition: all 0.3s ease;
 			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 			display: inline-block;
+			background-color: rgba(255, 255, 255, 0.1);
 		}
 
 		#nav ul li a:hover {
-			background-color: #4CAF50;
-			color: #fff;
+			background-color: var(--accent-color);
+			color: var(--dark-bg);
+			transform: translateY(-2px);
 		}
 
 		img {
@@ -51,6 +62,7 @@
 		li {
 			line-height: 1.6;
 			font-size: 1rem;
+			color: var(--text-color);
 		}
 
 		section {
@@ -61,8 +73,8 @@
 			margin-top: 2rem;
 			padding: 1.5rem;
 			border-radius: 8px;
-			background-color: #f8f9fa;
-			border-left: 4px solid #007bff;
+			background-color: var(--light-bg);
+			border-left: 4px solid var(--accent-color);
 		}
 
 		.card .form-check-input {
@@ -77,16 +89,19 @@
 		}
 
 		.form-check-input:checked {
-			background-color: #007bff;
-			border-color: #007bff;
+			background-color: var(--primary-color);
+			border-color: var(--primary-color);
 		}
 
 		.card {
 			transition: transform 0.2s ease;
+			border: none;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 		}
 
 		.card:hover {
-			transform: translateY(-2px);
+			transform: translateY(-5px);
+			box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 		}
 
 		.form-check {
@@ -111,6 +126,7 @@
 			font-size: 1.1rem;
 			margin-bottom: 1rem;
 			font-weight: 600;
+			color: var(--secondary-color);
 		}
 
 		.form-check {
@@ -123,7 +139,7 @@
 		}
 
 		.form-check:hover {
-			background-color: rgba(0, 123, 255, 0.05);
+			background-color: rgba(67, 97, 238, 0.05);
 		}
 
 		.form-check-label {
@@ -170,7 +186,7 @@
 		}
 
 		#sobre {
-			background-color: #f8f9fa;
+			background-color: var(--light-bg);
 			padding: 3rem 0;
 		}
 
@@ -183,13 +199,13 @@
 			display: inline-flex;
 			align-items: center;
 			text-decoration: none;
-			color: #333;
+			color: var(--text-color);
 			font-weight: 500;
 			transition: color 0.3s;
 		}
 
 		.github-link:hover {
-			color: #007bff;
+			color: var(--primary-color);
 		}
 
 		.github-icon {
@@ -207,15 +223,82 @@
 			width: auto;
 		}
 
-		.major h2 {
+		.site-title {
+			text-align: center;
+			font-size: 2.5rem;
+			font-weight: bold;
+			color: #fff;
 			margin-bottom: 0.5rem;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		.major h2 {
+			margin-bottom: 1.5rem;
+			color: var(--secondary-color);
+			font-weight: 700;
 		}
 
 		.major p {
-			margin-top: 1rem;
-			margin-bottom: 2rem;
-			font-size: 1.2rem;
-			color: #666;
+			margin-top: 0.5rem;
+			margin-bottom: 3rem;
+			font-size: 1.3rem;
+			color: var(--primary-color);
+			font-weight: 500;
+		}
+
+		#referencias {
+			background-color: var(--light-bg);
+			padding: 3rem 0;
+		}
+
+		#referencias .container {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.referencia-item {
+			margin-bottom: 1rem;
+			padding-bottom: 1rem;
+			border-bottom: 1px solid #e9ecef;
+		}
+
+		.referencia-item:last-child {
+			border-bottom: none;
+		}
+
+		.btn-primary {
+			box-shadow: none !important;
+			outline: none !important;
+			background-color: var(--primary-color);
+			border-color: var(--primary-color);
+			padding: 12px 30px;
+			font-weight: 600;
+			transition: all 0.3s ease;
+		}
+
+		.btn-primary:focus {
+			box-shadow: none !important;
+			outline: none !important;
+		}
+
+		.btn-primary:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 6px 12px rgba(67, 97, 238, 0.3) !important;
+			background-color: var(--secondary-color);
+			border-color: var(--secondary-color);
+		}
+
+		h1, h2, h3, h4, h5 {
+			color: var(--secondary-color);
+		}
+
+		#header {
+			background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+		}
+
+		#quiz-section {
+			background-color: var(--light-bg);
 		}
 
 		@media (max-width: 768px) {
@@ -227,6 +310,10 @@
 			h2,
 			h3 {
 				font-size: 1.5rem;
+			}
+
+			.site-title {
+				font-size: 2rem;
 			}
 
 			.btn-lg {
@@ -255,6 +342,10 @@
 				padding: 0.75rem;
 			}
 
+			.site-title {
+				font-size: 1.8rem;
+			}
+
 			.form-check-label {
 				font-size: 0.9rem;
 			}
@@ -273,6 +364,7 @@
 
 	<section id="header">
 		<header>
+			<div class="site-title">Web-Dop</div>
 			<div class="header-logo">
 				<img src="images/Dopamina.png" alt="Logo Dopamina" />
 			</div>
@@ -283,6 +375,7 @@
 					<li><a href="#three">Relação</a></li>
 					<li><a href="#four">Conclusão</a></li>
 					<li><a href="#quiz-section">Quiz</a></li>
+					<li><a href="#referencias">Referências</a></li>
 					<li><a href="#sobre">Sobre</a></li>
 				</ul>
 			</nav>
@@ -305,37 +398,19 @@
 						<p>O que é dopamina</p>
 					</header>
 					<p>
-						A dopamina é um neurotransmissor muito importante para o funcionamento do cérebro. Ela é como um
-						"mensageiro químico" que ajuda várias áreas do sistema nervoso a se comunicarem. É graças à
-						dopamina que sentimos motivação, prazer e vontade de realizar certas atividades. Ela está
-						presente em momentos simples do dia a dia, como quando comemos algo gostoso, quando recebemos um
-						elogio, completamos uma tarefa ou até quando aprendemos algo novo.
+						A dopamina é um neurotransmissor essencial para o funcionamento do cérebro. Costuma ser chamada de "mensageira química" porque ajuda diferentes partes do sistema nervoso a se comunicarem. É graças a ela que sentimos motivação, prazer e vontade de realizar algo. Ela aparece em situações bem comuns, como quando comemos algo gostoso, recebemos um elogio, completamos uma tarefa ou aprendemos algo novo.
 					</p>
 					<p>
-						O cérebro libera dopamina principalmente quando algo nos faz sentir bem ou quando esperamos
-						receber uma recompensa. Por isso, ela está diretamente ligada ao sistema de recompensa — um
-						conjunto de estruturas cerebrais que nos incentiva a repetir comportamentos que trazem algum
-						benefício, mesmo que esse benefício seja apenas uma sensação momentânea de prazer.
+						O cérebro libera dopamina quando vivemos experiências agradáveis ou quando acreditamos que algo bom está prestes a acontecer. Por isso, ela faz parte do chamado sistema de recompensa, que é responsável por reforçar comportamentos que nos fazem bem. Foi assim durante praticamente toda a história humana: esse sistema ajudava as pessoas a buscar comida, criar laços sociais, explorar o ambiente e aprender coisas novas.
 					</p>
 					<p>
-						Durante milhares de anos, esse sistema funcionou de forma equilibrada, motivando comportamentos
-						essenciais à sobrevivência humana, como buscar alimento, criar laços sociais, explorar o
-						ambiente e aprender coisas novas. Porém, com o avanço da tecnologia e a chegada de estímulos
-						rápidos e intensos, esse equilíbrio natural passou a ser constantemente desafiado.
+						Com o tempo, porém, a vida mudou. A tecnologia trouxe uma quantidade enorme de estímulos rápidos e intensos que não existiam antes. Isso mexeu bastante com o equilíbrio natural da dopamina.
 					</p>
 					<p>
-						A dopamina não é apenas um "hormônio da felicidade", como muitas pessoas dizem. Ela é mais
-						complexa que isso. Ela também está relacionada com foco, aprendizado, memórias, tomada de
-						decisão e até com nossos hábitos — bons ou ruins.
+						Ao contrário do que muitas pessoas pensam, a dopamina não é apenas o "hormônio da felicidade". Ela também está ligada ao foco, ao aprendizado, às memórias, à tomada de decisões e à formação de hábitos. Sempre que algo gera prazer imediato, o cérebro entende que aquilo vale a pena e começa a repetir o comportamento quase automaticamente.
 					</p>
 					<p>
-						Toda vez que algo nos gera prazer rápido, nosso cérebro registra que vale a pena repetir aquela
-						ação, criando um padrão de comportamento que pode se tornar automático.
-					</p>
-					<p>
-						E é justamente nesse ponto que começa a surgir um problema comum na vida moderna: a
-						hiperestimulação dopaminérgica, causada principalmente pelo uso excessivo de dispositivos
-						eletrônicos.
+						É nesse ponto que surge um problema cada vez mais comum na vida moderna: a hiperestimulação dopaminérgica causada pelo uso excessivo de dispositivos eletrônicos.
 					</p>
 				</div>
 			</section>
@@ -344,121 +419,59 @@
 				<div class="container">
 					<h3>Os perigos do desequilíbrio dopaminérgico</h3>
 					<p>
-						A dopamina, quando liberada de forma equilibrada, é extremamente benéfica. Ela nos ajuda a
-						aprender, a evoluir, a ter metas e a sentir satisfação ao conquistar algo. Porém, quando esse
-						equilíbrio é quebrado, começam a surgir consequências negativas que podem afetar tanto o cérebro
-						quanto o comportamento.
+						Quando liberada de forma equilibrada, a dopamina é muito positiva. Ela nos ajuda a aprender, a evoluir e a sentir satisfação ao atingir uma meta. O problema começa quando essa liberação se torna rápida e constante, principalmente por causa dos estímulos digitais.
 					</p>
 					<p>
-						Um dos maiores perigos é o ciclo de recompensa acelerada. Quando recebemos estímulos rápidos
-						demais — como uma notificação, um like, um vídeo curto, um novo nível no jogo ou uma mensagem
-						chegando — o cérebro passa a liberar dopamina em pequenas explosões.
+						Hoje em dia, recebemos uma enxurrada de pequenos reforços o tempo todo. É uma notificação que chega, um vídeo curto que aparece, uma mensagem, uma curtida, um novo nível no jogo. Cada vez que isso acontece, o cérebro libera uma pequena quantidade de dopamina.
 					</p>
 					<p>
-						O problema é que essa liberação constante faz com que o cérebro se acostume. Ele começa a pedir
-						mais estímulo para sentir o mesmo nível de prazer. Esse processo é parecido com o que acontece em vícios comportamentais. A pessoa deixa de sentir
-						motivação por coisas simples, como estudar, ler, conversar, caminhar ou fazer atividades que
-						antes eram agradáveis, porque essas ações geram uma liberação de dopamina mais lenta e menos
-						intensa.
+						Com o tempo, o cérebro se acostuma. Ele começa a pedir estímulos mais frequentes para sentir o mesmo nível de prazer. Esse processo é muito parecido com o que acontece em vícios comportamentais. Atividades simples, como estudar, caminhar, conversar ou ler um livro, passam a parecer pouco interessantes, porque produzem uma liberação de dopamina mais lenta.
 					</p>
 					<p>
-						Aos poucos, o cérebro passa a buscar apenas aquilo que dá prazer rápido e imediato.
-					</p>
-					<p>
-						Quando esse desequilíbrio se instala, alguns sinais podem surgir, como:
+						O cérebro então passa a buscar sempre aquilo que oferece prazer rápido. Quando esse padrão se instala, é comum que apareçam alguns sinais, como:
 					</p>
 					<ul>
-						<li>dificuldade para se concentrar por longos períodos</li>
-						<li>necessidade constante de checar o smartphone</li>
-						<li>irritação quando não há acesso a estímulos digitais</li>
-						<li>sensação de tédio rápido</li>
+						<li>dificuldade para se concentrar por mais tempo</li>
+						<li>necessidade constante de verificar o smartphone</li>
+						<li>irritação quando não há nenhum estímulo digital disponível</li>
+						<li>sensação de tédio quase imediata</li>
 						<li>procrastinação frequente</li>
-						<li>perda de motivação por atividades importantes</li>
-						<li>ansiedade por novidades, mensagens e notificações</li>
+						<li>falta de motivação para atividades importantes</li>
+						<li>ansiedade por novidades, mensagens ou notificações</li>
 					</ul>
 					<p>
-						Outro perigo é que esse padrão pode alterar a forma como o cérebro reage à recompensa.
-						Atividades comuns passam a parecer "sem graça", enquanto aquilo que gera dopamina de forma
-						rápida se torna quase irresistível. E o ciclo se repete: quanto mais dopamina rápida o cérebro
-						recebe, mais ele quer.
-					</p>
-					<p>
-						Esse é um dos grandes desafios da geração atual: reaprender a lidar com o tempo, o tédio e a
-						concentração em um mundo onde cada segundo pode virar uma nova explosão de estímulos.
+						Aos poucos, coisas comuns do dia a dia começam a perder o brilho. O que é rápido e intenso se torna mais atrativo, enquanto tudo o que exige paciência parece menos estimulante. Esse ciclo pode se tornar difícil de quebrar.
 					</p>
 				</div>
 			</section>
 
 			<section id="three">
 				<div class="container">
-					<h3>A relação entre a dopamina e o uso de dispositivos</h3>
+					<h3>A relação entre dopamina e dispositivos eletrônicos</h3>
 					<p>
-						Os smartphones, jogos digitais e redes sociais foram projetados exatamente para ativar o sistema
-						de recompensa do cérebro. Cada detalhe — desde as cores da interface até a frequência das
-						notificações — foi pensado para manter nossa atenção o maior tempo possível.
+						Os smartphones, as redes sociais e os jogos digitais são projetados de forma estratégica para prender a atenção. Cada detalhe das interfaces, desde as cores até o formato das notificações, é pensado para ativar o sistema de recompensa do cérebro.
 					</p>
 					<p>
-						E isso acontece porque o modelo de felicidade rápida funciona: quanto mais engajados estamos,
-						mais dopamina o cérebro libera.
+						As redes sociais utilizam um tipo de reforço chamado "intermitente". Isso significa que você nunca sabe exatamente quando vai receber uma curtida, um comentário ou uma mensagem. Essa imprevisibilidade é muito poderosa. Ela ativa o mesmo mecanismo que encontramos em jogos de azar e faz o cérebro liberar dopamina não só quando recebe uma recompensa, mas também quando está esperando por ela.
 					</p>
 					<p>
-						As redes sociais, por exemplo, usam reforços intermitentes. Isso significa que você nunca sabe
-						exatamente quando vai receber uma curtida, um comentário ou uma mensagem. Essa imprevisibilidade
-						ativa o mesmo mecanismo que encontramos em cassinos: a esperança de uma recompensa inesperada.
+						Os jogos funcionam de maneira parecida. Eles oferecem pequenas conquistas e metas rápidas, criando a sensação constante de progresso. Já o smartphone, como um todo, virou praticamente uma "máquina de dopamina" que está sempre ao alcance da mão, vibrando, apitando e mostrando novidades.
 					</p>
 					<p>
-						O cérebro libera dopamina não apenas quando recebemos algo, mas também quando estamos esperando
-						receber — e isso é extremamente poderoso.
-					</p>
-					<p>
-						Os jogos digitais seguem o mesmo padrão, oferecendo conquistas rápidas, metas pequenas,
-						recompensas constantes e o famoso "próximo nível". Isso mantém o cérebro preso ao ciclo de
-						prazer imediato.
-					</p>
-					<p>
-						Já o smartphone, como um todo, virou uma espécie de "máquina de dopamina portátil". Ele está
-						sempre por perto, sempre vibrando, iluminando, chamando, notificando e oferecendo algum tipo de
-						conteúdo que estimula o cérebro.
-					</p>
-					<p>
-						Sem perceber, muitas pessoas passam o dia inteiro passando de estímulo em estímulo: vídeos
-						curtos, feeds infinitos, mensagens, sons, imagens, cliques, jogos, notificações e novidades.
-					</p>
-					<p>
-						Esse comportamento constante de checar o aparelho ativa fenômenos modernos como:
+						Essa rotina de estímulos contínuos contribui para fenômenos modernos como:
 					</p>
 					<ul>
-						<li><b>FOMO (Fear of Missing Out)</b><br />O medo de estar perdendo algo importante. A sensação
-							de que, se a pessoa não olhar o smartphone, pode perder uma mensagem, um evento, uma
-							postagem ou alguma novidade "urgente". Esse sentimento é totalmente alimentado pelo sistema
-							dopaminérgico.</li>
-						<li><b>Síndrome do Ping</b><br />A ansiedade causada pela espera de notificações. Mesmo quando o
-							smartphone está silencioso, a pessoa pode sentir que ele vibrou, ouvir sons inexistentes ou
-							ficar presa na expectativa de que algo vai chegar a qualquer momento.</li>
+						<li><b>FOMO (Fear of Missing Out)</b><br />É o medo de perder alguma informação importante. A pessoa sente que precisa conferir o smartphone o tempo todo para não ficar de fora.</li>
+						<li><b>Síndrome do Ping</b><br />É a ansiedade causada pela expectativa de receber uma notificação. Muitas vezes, a pessoa chega até a sentir a vibração "fantasma" do aparelho, mesmo quando ele não tocou.</li>
 					</ul>
 					<p>
-						Esses fenômenos se apoiam diretamente na lógica da dopamina: a expectativa de receber algo pode
-						gerar quase tanto prazer quanto receber de fato.
+						Esses fenômenos se relacionam diretamente à dopamina, porque o simples ato de esperar uma recompensa já estimula o circuito de prazer.
 					</p>
 					<p>
-						Com o tempo, isso pode levar a:
-					</p>
-					<ul>
-						<li>queda de produtividade</li>
-						<li>irritação quando longe do aparelho</li>
-						<li>dificuldade de foco</li>
-						<li>perda de prazer em atividades "lentas"</li>
-						<li>dependência emocional do smartphone</li>
-						<li>baixa tolerância ao tédio</li>
-						<li>sensação de vazio quando não há estímulos</li>
-					</ul>
-					<p>
-						Hoje, muitos cientistas descrevem os dispositivos eletrônicos como os principais responsáveis
-						por essa nova crise da dopamina. Não porque eles sejam ruins por si só, mas porque foram criados
-						para capturar nossa atenção de forma muito intensa.
+						Com o tempo, esse comportamento pode levar a queda de produtividade, irritação ao ficar longe do aparelho, dificuldade de foco, dependência emocional do smartphone, baixa tolerância ao tédio e a sensação de vazio quando não há nenhum estímulo acontecendo.
 					</p>
 					<p>
-						E o cérebro humano ainda não evoluiu para lidar tão bem com isso.
+						Muitos pesquisadores afirmam que os dispositivos eletrônicos se tornaram um dos principais fatores de desequilíbrio dopaminérgico atualmente. Não porque sejam ruins por natureza, mas porque foram projetados para capturar nossa atenção de forma muito intensa, e o cérebro humano ainda não se adaptou totalmente a isso.
 					</p>
 				</div>
 			</section>
@@ -467,17 +480,13 @@
 				<div class="container">
 					<h3>Conclusão</h3>
 					<p>
-						Entender a dopamina é essencial para compreender como funcionam nossos hábitos, nossas vontades
-						e até nossos comportamentos automáticos. Em um mundo cheio de estímulos rápidos, é fácil cair no
-						ciclo da dopamina instantânea e perder o equilíbrio natural do cérebro. Os dispositivos
-						eletrônicos são ferramentas poderosas, mas também podem se tornar fontes de compulsão e
-						ansiedade quando usados de forma excessiva.
+						Entender como a dopamina funciona é fundamental para compreender nossos hábitos e comportamentos automáticos. Em um mundo cheio de estímulos rápidos, é fácil cair no ciclo da dopamina instantânea e perder o equilíbrio natural do cérebro.
 					</p>
 					<p>
-						Ao reconhecer como a dopamina influencia nossas escolhas e emoções, podemos aprender a usar a
-						tecnologia de maneira mais saudável, consciente e equilibrada. O objetivo não é abandonar os
-						dispositivos, mas compreender como eles atuam sobre o cérebro — e, a partir disso, recuperar o
-						controle sobre nossos hábitos digitais.
+						Os dispositivos eletrônicos são ferramentas incríveis e úteis, mas também podem gerar compulsão e ansiedade quando usados sem moderação. Ao entender como eles influenciam o cérebro, conseguimos retomar o controle sobre nossos hábitos digitais.
+					</p>
+					<p>
+						O objetivo não é abandonar a tecnologia, mas aprender a utilizá-la de uma forma mais consciente, saudável e equilibrada. Quando conhecemos os mecanismos por trás desse processo, fica muito mais fácil construir uma relação mais tranquila com o mundo digital.
 					</p>
 				</div>
 			</section>
@@ -665,6 +674,33 @@
 					</form>
 
 					<div id="resultado" class="resultado-box"></div>
+				</div>
+			</section>
+
+			<section id="referencias">
+				<div class="container">
+					<h3 class="text-center mb-4">Referências</h3>
+					<div class="referencia-item">
+						<p>LEMBKE, Anna. <strong>Nation Dopamina: Como encontrar equilíbrio na era do prazer instantâneo</strong>. Rio de Janeiro: Intrínseca, 2021.</p>
+					</div>
+					<div class="referencia-item">
+						<p>WISE, R. A.; JORDAN, C. J. <strong>"Dopamine, behavior, and addiction."</strong> Journal of Biomedical Science, v. 28, n. 1, p. 83, 2021.</p>
+					</div>
+					<div class="referencia-item">
+						<p>SALUM, C.; ISSY, A. C.; GUIMARÃES, E. A. D. B. <strong>"Dopamina, óxido nítrico e suas interações em modelos para o estudo da esquizofrenia."</strong> Revista Portuguesa de Psicossomática, v. 5, n. 1, p. 21–31, 2003.</p>
+					</div>
+					<div class="referencia-item">
+						<p><strong>Dopamina: o que é, função e relação com doenças.</strong> Disponível em: &lt;https://mundoeducacao.uol.com.br/biologia/dopamina.htm&gt;.</p>
+					</div>
+					<div class="referencia-item">
+						<p><strong>Dopamina: por que busca desenfreada por estímulos pode tirar satisfação da vida.</strong> BBC News Brasil, [s.d.].</p>
+					</div>
+					<div class="referencia-item">
+						<p>PACETE, L. G. <strong>Brasil é o terceiro maior consumidor de redes sociais em todo o mundo.</strong> Disponível em: &lt;https://forbes.com.br/forbes-tech/2023/03/brasil-e-o-terceiro-pais-que-mais-consome-redes-sociais-em-todo-o-mundo/&gt;.</p>
+					</div>
+					<div class="referencia-item">
+						<p><strong>Mecanismos de recompensa: como o cérebro processa nossas conquistas?</strong> Disponível em: &lt;https://institutodepsiquiatriapr.com.br/blog/mecanismos-de-recompensa-como-o-cerebro-processa-nossas-conquistas/&gt;.</p>
+					</div>
 				</div>
 			</section>
 
